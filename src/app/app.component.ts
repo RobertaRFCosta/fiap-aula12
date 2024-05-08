@@ -11,5 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'aula12';
 
-  desabilitado: boolean = true;
+  // desabilitado: boolean = true;
+
+  imageUrl: String = "http://lorempixel.com.br/200/200";
 }
