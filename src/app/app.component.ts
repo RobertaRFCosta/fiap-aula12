@@ -1,21 +1,3 @@
-// import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-
-// @Component({
-//   selector: 'app-root',
-//   standalone: true,
-//   imports: [RouterOutlet],
-//   templateUrl: './app.component.html',
-//   styleUrl: './app.component.css'
-// })
-// export class AppComponent {
-//   title = 'aula12';
-
-//   // desabilitado: boolean = true;
-
-//   imageUrl: String = "http://lorempixel.com.br/200/200";
-// }
-
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -29,5 +11,25 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'introducao-angular';
 
-  urlImagem = 'http://lorempixel.com.br/400/200';
+  isMouseOver: boolean = false;
+  valorAtual: string = '';
+  valorSalvo: string = '';
+  desabilitado: boolean = false;
+
+  botaoClicado() {
+    alert('Botão clicado!');
+    this.desabilitado = !this.desabilitado
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.valorAtual = event.key;
+  }
+
+  salvarValor(event: any) {
+    this.valorSalvo = event;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
+  }
 }
